@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0"
+            prefWidth="1315.0" styleClass="background" stylesheets="@Css/NewSpaper.css"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller">
+    <left>
+        <VBox prefHeight="850.0" prefWidth="198.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="70.0" prefWidth="110.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="78.0" prefWidth="162.0"
+                               text="News">
+                            <font>
+                                <Font size="29.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox prefHeight="850.0" prefWidth="1051.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="72.0" prefWidth="1154.0">
+                    <children>
+                        <Label text="Search bar">
+                            <font>
+                                <Font size="40.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <ScrollPane prefHeight="780.0" prefWidth="1087.0">
+                    <content>
+                        <GridPane fx:id="NewsGrid" prefWidth="0.0">
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                        </GridPane>
+                    </content>
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </ScrollPane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
