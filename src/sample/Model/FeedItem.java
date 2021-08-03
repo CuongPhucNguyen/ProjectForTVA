@@ -2,7 +2,7 @@ package sample.Model;
 
 import java.util.List;
 
-public class FeedItem {
+public class FeedItem implements Runnable{
     private String title;
     private String description;
     private String pubDate;
@@ -10,6 +10,7 @@ public class FeedItem {
     private String link;
     private String category;
     private String name;
+
 
     public String getTitle() {
         return title;
@@ -58,8 +59,8 @@ public class FeedItem {
 
     @Override
     public String toString() {
-        return "=======\nTiĂªu Ä‘á»: " + title + "\n" + ", xuáº¥t báº£n vĂ o ngĂ y: :" + pubDate + "\n" + ", TĂ³m táº¯t: "
-                + description + "\n" + ", áº¢nh minh há»a: " + thumbnail + "\n" + ", ÄÆ°á»ng Dáº«n:" + link + "=======\n";
+        return "\nTitle: " + title + "\n" + "Data: " + pubDate + "\n" + "Summary: "
+                + description + "\n" + "Picture: " + thumbnail + "\n" + "Link:" + link + "\n";
     }
 
     public static String limit(String value, int length) {
@@ -71,4 +72,8 @@ public class FeedItem {
         return buf.toString();
     }
 
+    @Override
+    public void run() {
+
+    }
 }

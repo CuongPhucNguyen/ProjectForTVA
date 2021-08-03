@@ -8,7 +8,6 @@ import javafx.scene.image.ImageView;
 import sample.Model.FeedItem;
 
 public class CardController {
-
     @FXML
     private ImageView thumbnail;
 
@@ -18,33 +17,25 @@ public class CardController {
     @FXML
     private Label pubDate;
 
-    @FXML
-    private Label description;
-
-
     public void setdata(FeedItem item) {
         String thumbnailUrl = item.getThumbnail();
+        Image image;
+        //catch error by unsupported image url
         if (!thumbnailUrl.equals("")) {
-            Image image = new Image(thumbnailUrl);
-            thumbnail.setImage(image);
+            image = new Image(thumbnailUrl);
         } else {
-            Image image = new Image("sample/public/404.jpg");
-            thumbnail.setImage(image);
+            image = new Image("sample/public/404.jpg");
         }
+        thumbnail.setImage(image);
         if (!item.getTitle().equals("")) {
             title.setText(item.getTitle());
         } else {
-            title.setText("Tin tức không có title");
+            title.setText("News don't have title");
         }
         if (!item.getPubDate().equals("")) {
             pubDate.setText(item.getPubDate());
         } else {
-            pubDate.setText("H bị lỗi");
-        }
-        if (!item.getDescription().equals("")) {
-            description.setText(item.getDescription());
-        } else {
-            description.setText("Tin bị lỗi");
+            pubDate.setText("News don't have time");
         }
     }
 }

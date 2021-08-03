@@ -60,9 +60,7 @@ public class zing {
         }
         return null;
     }
-
-
-    public static String list_zing_home(String zingUrl, List<FeedItem> ls) {
+    public static void list_zing_home(String zingUrl, List<FeedItem> ls) {
         try {
             Document doc = Jsoup.connect(zingUrl).timeout(6000).get();
             Elements zingTable = doc.select("article");
@@ -71,17 +69,14 @@ public class zing {
                 String title = header.select("header p.article-title a").text();
                 String pubDate = header.select("header p.article-meta span.article-publish span.friendly-time").text();
                 String link = header.select("a").attr("href");
-                String description = header.select("header p.article-summary").text();
                 String thumbnail = header.select("p.article-thumbnail a img").attr("data-src");
                 item.setPubDate(pubDate);
                 item.setThumbnail(thumbnail);
-                item.setDescription(description);
                 item.setTitle(title);
                 ls.add(item);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
     }
 }

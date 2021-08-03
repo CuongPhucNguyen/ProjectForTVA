@@ -14,51 +14,55 @@ import java.util.*;
 
 import sample.WebScraper.nhandanScraper;
 import sample.WebScraper.zing;
-
+import sample.WebScraper.thanhnien;
 
 public class Controller implements Initializable {
     public String nhandanurl = "https://nhandan.vn/";
     public String zingurl = "https://zingnews.vn/";
+    public String thanhnienurl = "https://thanhnien.vn/";
 
     @FXML
-    private GridPane NewsGrid;
-
-    private List<FeedItem> itemsInController;
-
+    public GridPane NewsGrid;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        itemsInController = new ArrayList<>(dataUnique());
+        List<FeedItem> itemsInController = new ArrayList<>(dataUnique());
+        removeNull(itemsInController);
         int column = 0;
         int row = 1;
         try {
-            for (int i = 0; i < 50; i++) {
+            for (int i = 0; i < 100; i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("Design/NewCard.fxml"));
                 VBox NewsPosition = fxmlLoader.load();
-
                 CardController cardController = fxmlLoader.getController();
                 cardController.setdata(itemsInController.get(i));
-                if (column == 4) {
+                if (column == 5) {
                     column = 0;
                     ++row;
                 }
                 NewsGrid.add(NewsPosition, column++, row);
-                GridPane.setMargin(NewsPosition, new Insets(10, 10, 10, 10));
+                GridPane.setMargin(NewsPosition, new Insets(20, 20, 15, 15));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
+    //Collector all data
     private List<FeedItem> data() {
         List<FeedItem> ls = new ArrayList<>();
+        thanhnien.list_thanh_nien(thanhnienurl, ls);
         nhandanScraper.list_paper_nhandan(nhandanurl, ls);
         zing.list_zing_home(zingurl, ls);
         return ls;
     }
-
+    //first filter(avoid Repeat item)
     public HashSet<FeedItem> dataUnique() {
-        HashSet<FeedItem> NewHashSet = new HashSet<>(data());
-        return NewHashSet;
+        return new HashSet<>(data());
     }
+
+    //function remove all unsupported data
+    private static void removeNull(List<FeedItem> filter){
+        filter.removeIf(item -> item.getTitle().equals("") || item.getPubDate().equals("") || item.getThumbnail().equals(""));
+    }
+
 }
