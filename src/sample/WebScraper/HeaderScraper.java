@@ -1,7 +1,7 @@
 package sample.WebScraper;
 
 import java.io.IOException;
-import THANHNIEN.Model.FeedItem;
+import sample.Model.FeedItem;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -45,7 +45,6 @@ public class HeaderScraper {
                     e.printStackTrace();
                 }
                 System.out.println(pubDate);
-                ThanhNienNews.add(new FeedItem(title, description, date, thumbnail, link, "Thoi Su", "Thanh Nien"));
             }
 
         } catch (IOException e)
