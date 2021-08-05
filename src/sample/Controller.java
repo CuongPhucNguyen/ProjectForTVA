@@ -4,8 +4,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import sample.Model.FeedItem;
 
 import java.io.IOException;
@@ -17,6 +21,11 @@ import sample.WebScraper.zing;
 import sample.WebScraper.thanhnien;
 
 public class Controller implements Initializable {
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
     public String nhandanurl = "https://nhandan.vn/";
     public String zingurl = "https://zingnews.vn/";
     public String thanhnienurl = "https://thanhnien.vn/";
@@ -65,4 +74,24 @@ public class Controller implements Initializable {
     private static void removeNull(List<FeedItem> filter){
         filter.removeIf(item -> item.getTitle().equals("") || item.getPubDate().equals("") || item.getThumbnail().equals(""));
     }
+
+    public void Thethao(javafx.event.ActionEvent actionEvent) throws IOException
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("Design/Sport.fxml"));
+        stage =  (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void MainDesign(javafx.event.ActionEvent actionEvent) throws IOException
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("Design/MainDesign.fxml"));
+        stage =  (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
 }
