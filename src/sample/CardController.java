@@ -2,8 +2,12 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+
 
 import sample.Model.FeedItem;
 
@@ -18,6 +22,13 @@ public class CardController {
     private Label pubDate;
 
     public void setdata(FeedItem item) {
+        Rectangle clip = new Rectangle(
+                thumbnail.getFitWidth(), thumbnail.getFitHeight()
+        );
+        clip.setArcWidth(20);
+        clip.setArcHeight(20);
+        thumbnail.setClip(clip);
+        thumbnail.setEffect(new DropShadow(20, Color.BLACK));
         String thumbnailUrl = item.getThumbnail();
         Image image;
         //catch error by unsupported image url

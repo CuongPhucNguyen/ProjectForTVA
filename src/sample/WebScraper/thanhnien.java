@@ -6,15 +6,13 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import sample.Model.FeedItem;
 public class thanhnien {
     public static void list_thanh_nien(String URL, List<FeedItem> News)
     {
         try{
-            Document doc = Jsoup.connect(URL).timeout(6000).get();
+            Document doc = Jsoup.connect(URL).timeout(5000).get();
             Elements TNTable = doc.select("article");
 
             for(Element header : TNTable){

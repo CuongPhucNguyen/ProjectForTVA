@@ -74,6 +74,5 @@ public class FeedItem implements Runnable{
 
     @Override
     public void run() {
-
     }
 }

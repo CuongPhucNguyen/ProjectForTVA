@@ -1,6 +1,6 @@
 .background{
-    -fx-background-color: linear-gradient(to right top, #a74a7f, #89447b, #6c3e74, #4f3769, #34305b, #2b3b67, #1d4571, #005079, #00749d, #009bba, #00c2ce, #00e9da);
+    -fx-background-color: "#1f1f1f";
 }
 .GridPane-style{
-    -fx-background-color: linear-gradient(to right top, #a74a7f, #89447b, #6c3e74, #4f3769, #34305b, #2b3b67, #1d4571, #005079, #00749d, #009bba, #00c2ce, #00e9da);
+    -fx-background-color: "#1f1f1f";
 }

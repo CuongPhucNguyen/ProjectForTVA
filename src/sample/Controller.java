@@ -36,12 +36,13 @@ public class Controller implements Initializable {
                 VBox NewsPosition = fxmlLoader.load();
                 CardController cardController = fxmlLoader.getController();
                 cardController.setdata(itemsInController.get(i));
-                if (column == 5) {
+                if (column == 4) {
                     column = 0;
                     ++row;
                 }
                 NewsGrid.add(NewsPosition, column++, row);
-                GridPane.setMargin(NewsPosition, new Insets(20, 20, 15, 15));
+                GridPane.setMargin(NewsPosition,
+                        new Insets(20, 20, 10, 25));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -64,5 +65,4 @@ public class Controller implements Initializable {
     private static void removeNull(List<FeedItem> filter){
         filter.removeIf(item -> item.getTitle().equals("") || item.getPubDate().equals("") || item.getThumbnail().equals(""));
     }
-
 }

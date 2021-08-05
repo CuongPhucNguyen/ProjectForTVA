@@ -7,7 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library name="javafx-fxml">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/javafx-fxml-11.jar!/" />
@@ -25,5 +25,6 @@
     </orderEntry>
     <orderEntry type="library" name="jsoup-1.14.1" level="project" />
     <orderEntry type="library" name="jsoup-1.14.11" level="project" />
+    <orderEntry type="library" name="lib" level="application" />
   </component>
 </module>

@@ -12,7 +12,7 @@ import sample.Model.FeedItem;
 public class zing {
     public static String list_paper_zing(String source, List<FeedItem> feedItems) {
         try {
-            Document doc = Jsoup.connect("https://zingnews.vn/").timeout(6000).get();
+            Document doc = Jsoup.connect("https://zingnews.vn/").timeout(5000).get();
             Elements zingTable = doc.select("article");
             for (Element header : zingTable) {
                 Elements Title_selection = header.select("p.article-title");

@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" style="-fx-background-radius: 1em;" styleClass="background" stylesheets="@Css/NewSpaper.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <center>
@@ -16,24 +14,18 @@
             <VBox prefHeight="200.0" prefWidth="100.0">
                 <HBox prefHeight="100.0" prefWidth="200.0">
                 </HBox>
-                <HBox prefHeight="100.0" prefWidth="200.0">
-                    <Label text="Menu Catory here" textFill="#df0000">
-                        <font>
-                            <Font size="22.0"/>
-                        </font>
-                    </Label>
-                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0" />
             </VBox>
-            <ScrollPane prefHeight="697.0" prefWidth="1510.0">
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="630.0" prefWidth="1508.0" styleClass="GridPane-style">
                 <VBox.margin>
-                    <Insets/>
+                    <Insets />
                 </VBox.margin>
-                <GridPane fx:id="NewsGrid" prefWidth="0.0">
+                <GridPane fx:id="NewsGrid" prefWidth="0.0" styleClass="GridPane-style">
                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <padding>
-                        <Insets right="10.0"/>
+                        <Insets right="10.0" />
                     </padding>
                 </GridPane>
             </ScrollPane>

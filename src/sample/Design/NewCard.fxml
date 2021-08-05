@@ -6,27 +6,27 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0"
-      prefWidth="271.0" style="-fx-background-radius: 1em;" stylesheets="@Css/NewSpaper.css"
-      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CardController">
-    <ImageView fx:id="thumbnail" fitHeight="212.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true">
-        <VBox.margin>
-            <Insets/>
-        </VBox.margin>
-    </ImageView>
-    <HBox prefHeight="97.0" prefWidth="271.0" style="-fx-background-radius: 1em;">
-        <Label fx:id="title" prefHeight="35.0" prefWidth="190.0" text="Title" textFill="#258f41">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="335.0" style="-fx-background-radius: 1em;" stylesheets="@Css/NewSpaper.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CardController">
+   <AnchorPane prefHeight="250.0" prefWidth="340.0" style="-fx-background-radius: 1em;">
+      <children>
+          <ImageView fx:id="thumbnail" fitHeight="249.0" fitWidth="336.0" pickOnBounds="true" />
+          <HBox layoutY="143.0" prefHeight="67.0" prefWidth="346.0" style="-fx-background-radius: 1em;">
+            <children>
+                 <Label fx:id="title" prefHeight="67.0" prefWidth="336.0" text="Title" textFill="WHITE">
+                     <font>
+                         <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  <HBox.margin>
+                     <Insets left="5.0" />
+                  </HBox.margin>
+                 </Label>
+            </children>
+          </HBox>
+           <Label fx:id="pubDate" layoutX="14.0" layoutY="199.0" prefHeight="42.0" prefWidth="336.0" text="day" textFill="WHITE">
             <font>
-                <Font size="16.0"/>
+               <Font name="System Bold" size="15.0" />
             </font>
-            <HBox.margin>
-                <Insets left="5.0"/>
-            </HBox.margin>
-        </Label>
-        <Label fx:id="pubDate" prefHeight="18.0" prefWidth="68.0" text="day">
-            <HBox.margin>
-                <Insets top="40.0"/>
-            </HBox.margin>
-        </Label>
-    </HBox>
+         </Label>
+      </children>
+   </AnchorPane>
 </VBox>
