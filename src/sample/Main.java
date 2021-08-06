@@ -15,26 +15,10 @@ import javafx.stage.StageStyle;
 public class Main extends Application {
     double xOffset, yOffset;
     Parent root;
-
-
     @Override
     public void start(Stage primaryStage) {
 
         try {
-//            //chinh lai de phu hop
-//            int sceneWidth = 0;
-//            int sceneHeight = 0;
-//            if (screenWidth <= 800 && screenHeight <= 600) {
-//                sceneWidth = 800;
-//                sceneHeight = 600;
-//            } else if (screenWidth <= 1280 && screenHeight <= 768) {
-//                sceneWidth = 1000;
-//                sceneHeight = 600;
-//            } else if (screenWidth <= 1920 && screenHeight <= 1080) {
-//                sceneWidth = 1720;
-//                sceneHeight = 980;
-//            }
-
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Design/MainDesign.fxml")));
             root.getStylesheets().add(Objects.requireNonNull(getClass().getResource("Design/Css/NewSpaper.css")).toExternalForm());
             Scene scene = new Scene(root);

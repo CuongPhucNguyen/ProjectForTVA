@@ -2,7 +2,7 @@ package sample.Model;
 
 import java.util.List;
 
-public class FeedItem implements Runnable{
+public class FeedItem{
     private String title;
     private String description;
     private String pubDate;
@@ -70,10 +70,6 @@ public class FeedItem implements Runnable{
             buf.append("...");
         }
         return buf.toString();
-    }
-
-    @Override
-    public void run() {
     }
 
 }
