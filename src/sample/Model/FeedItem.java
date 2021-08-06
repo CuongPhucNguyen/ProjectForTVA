@@ -2,7 +2,7 @@ package sample.Model;
 
 import java.util.List;
 
-public class  FeedItem implements Runnable{
+public class FeedItem implements Runnable{
     private String title;
     private String description;
     private String pubDate;
@@ -75,4 +75,5 @@ public class  FeedItem implements Runnable{
     @Override
     public void run() {
     }
+
 }

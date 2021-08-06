@@ -12,11 +12,11 @@ import org.jsoup.select.Elements;
 
 public class nhandanScraper {
     public static void list_paper_nhandan(String nhandanurl, List<FeedItem> News) {
-        FeedItem item = new FeedItem();
         try {
             Document doc = Jsoup.connect(nhandanurl).timeout(5000).get();
             Elements nhandantable = doc.select("article");
             for (Element header : nhandantable.select("div")) {
+                FeedItem item = new FeedItem();
                 String title = header.select("div.box-img a").attr("title");
                 String link = header.select("div.box-img a").attr("href");
                 String thumbnail = header.select("div.box-img a img").attr("data-src");
@@ -30,4 +30,5 @@ public class nhandanScraper {
             e.printStackTrace();
         }
     }
+
 }
