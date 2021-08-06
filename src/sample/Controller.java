@@ -48,9 +48,14 @@ public class Controller implements Initializable {
                 DinamixGridPane = 2;
             } else if (screenWidth <= 1280 && screenHeight <= 768) {
                 DinamixGridPane = 3;
-            } else if (screenWidth <= 1920 && screenHeight <= 1080) {
-                DinamixGridPane = 4;
             }
+            else if (screenWidth <= 1536 && screenHeight <= 864) {
+                DinamixGridPane = 4;
+            }else if (screenWidth <= 1920 && screenHeight <= 1080) {
+                DinamixGridPane = 5;
+            }
+
+            System.out.println("Chiều rộng " + screenWidth + " chiều dài " + screenHeight);
         int row = 1;
         try {
             for (int i = 0; i < 10; i++) {
