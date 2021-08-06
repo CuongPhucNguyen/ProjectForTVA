@@ -15,12 +15,84 @@
                </children></HBox>
                 <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="97.0" text="New" textOverrun="WORD_ELLIPSIS">
+                  <Label prefHeight="41.0" prefWidth="83.0" text="Category" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="New" textFill="#ebebeb" textOverrun="WORD_ELLIPSIS">
                      <font>
                         <Font size="13.0" />
                      </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#Thethao" prefHeight="42.0" prefWidth="97.0" text="Sports" textOverrun="WORD_ELLIPSIS">
+                  <Button mnemonicParsing="false" onAction="#Thethao" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Sports" textFill="#ebebeb" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Thethao" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Covid" textFill="#ebebeb" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Thethao" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Politics" textFill="#ebebeb" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Thethao" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Business" textFill="#ebebeb" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Thethao" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Technology" textFill="#ebebeb" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Thethao" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Health" textFill="#ebebeb" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Thethao" prefHeight="42.0" prefWidth="106.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Entertainment" textFill="#ebebeb" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Thethao" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="World" textFill="#ebebeb" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Thethao" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Other" textFill="#ebebeb" textOverrun="WORD_ELLIPSIS">
                      <font>
                         <Font size="13.0" />
                      </font>
